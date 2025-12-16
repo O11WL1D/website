@@ -75,6 +75,7 @@ flex-direction: row;
 
 
 
+
 .bparentbox{
 display: flex;
 text-align: center;
@@ -1406,3 +1407,12 @@ padding-left: 20px;
            
            
            
+                      .maindiv {
+            
+      border-style: solid;
+      width: fit-content;
+      margin: auto;
+      padding: 10px;
+      background-color: rgb(247, 237, 225);
+           }
+
