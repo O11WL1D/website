@@ -3,6 +3,7 @@
 let urls = [
   "project1.html", 
   "project2.html", 
+  "project3.html"
 
 ];
 
@@ -186,10 +187,12 @@ function gotonextindex(dreamindex) {
 }
 function gotoprevindex(dreamindex) {
  
- 
-    window.location.href = urls[dreamindex-1];
+    if(!(dreamindex-1 < 0)){
+    window.location.href = urls[dreamindex-1];}
     
 }
+
+
 
 
 //--------------------------------------------------TEMPLATED ITEMS!!!!!
