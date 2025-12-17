@@ -1,0 +1,236 @@
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    
+
+<link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+
+  
+  
+  
+
+
+ 
+
+  
+  
+
+
+
+  
+
+
+
+
+
+ 
+
+ <div class="parentboxcenter">
+
+    <div class="headystyle">
+    
+  
+      
+
+       <button onclick="gotoprevindex(-1)">Prev post</button>
+       <button onclick="gotonextindex(-1)">Next post</button>
+
+       <button onclick="randomdream()">random post</button>
+       <button onclick="location.href='./contentlibrary.html'">post library</button>
+
+
+   
+   </div>
+   </div>
+   
+
+
+
+<br><br><br><br>
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+
+
+    <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    
+<script>
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        
+
+
+
+
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            
+
+            var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        }, 1500); // Delay autoplay
+
+    });
+
+
+
+
+ 
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+
+
+               var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+
+          if(value==1){
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+          }
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
+         
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+
+
+  
+
+
+<script src="../resources/progresources/js/pscript.js"></script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </footer>
+
+
+
+    
+
+
+    
+
+
+
+ 
+
+</body>
+</html>
