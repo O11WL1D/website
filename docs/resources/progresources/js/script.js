@@ -3,7 +3,10 @@
 let urls = [
   "project1.html", 
   "project2.html", 
-  "project3.html"
+  "project3.html",
+  "project4.html", 
+  "project5.html", 
+  "project6.html"
 
 ];
 
