@@ -1,4 +1,12 @@
+---
+title: edl robot
+date: 2025-08-01
+description: iiits a robot.
+tags: 
+- projects
+---
 
+ {% assign library = "projects.html" %}
 
 
 
@@ -6,7 +14,7 @@
 <html lang="en">
   <head>
     
-    <meta http-equiv="refresh" content="0; url=../404.html">
+    
 
 {% include "partials/defstyle.njk" %}
 
@@ -46,7 +54,7 @@
 
     <div>
         
-        <img src="../resources/images/16bit.png" class="indicator5"> </img>
+        <img src="../resources/images/robot.jpeg.png" class="indicator5"> </img>
 
       </div>
 
@@ -55,12 +63,33 @@
 
 <div class="betterparentboxcenter">
     <p class="betterp">
-       • Improved version of 8 bit computer implemented via FPGA DE0-CV dev board 
-       • Added Adjustable-frequency Clock, three port W/R reg file and much more
-        
-       Progress presentation can be found  <a href="https://www.linkedin.com/in/gavin-unrue/overlay/1635511234448/single-media-viewer/?profileId=ACoAADbeo2kBvR-3A6LRyaBPi1caVx19yGecSbw">here</a> 
-       
-        
+     # Description
+This is a robot I built for my electronics design lab class. 
+It features a cruise control system, an arduino interface and a remote control.
+The cruise control system utilizes a negative feedback loop created by
+ several filters linked up to each other. The remote control utilizes a HC-05 
+bluetooth module which communicates with the remote controller's arduino 
+via UART serial communication. 
+ 
+    # Concepts used
+Electronics Design Lab (ECEN 2270) utilized topics learned 
+in my other class Circuits as Systems (ECEN 2260). The following 
+is a list of the concepts utilized 
+in this project:
+
+- voltage level converters
+- analog to pwm conversion
+- pwm to analog conversion
+- opamp circuit analysis
+- hardware interrupts
+- negative feedback
+- filters
+- h-bridge circuits
+- pcb soldering
+
+# video + photo documentation
+
+Photos and videos found <a href="https://imgur.com/a/v1CFzqk">here</a> 
     </p>
 </div>
 
