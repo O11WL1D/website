@@ -1,0 +1,107 @@
+---
+title: rtos wolfenstien video game
+date: 2025-08-01
+description: real time, operating system game I made. 
+tags: 
+- projects
+---
+
+ {% assign library = "projects.html" %}
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+
+{% include "partials/defstyle.njk" %}
+
+<link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
+
+
+</head>
+
+
+
+ {% assign library = "projects.html" %}
+  
+
+<body>
+
+
+ 
+
+
+
+
+    <div class="maindiv">
+    
+
+ {% include "partials/contentheader.njk" %}
+       
+        
+
+<br><br>
+
+
+
+<div class="betterparentboxcenter">
+
+ 
+
+    <div>
+        
+        <img src="../resources/images/wolf.png" class="indicator5"> </img>
+
+      </div>
+
+
+</div>
+
+<div class="betterparentboxcenter">
+    <p class="betterp">
+
+•Implemented on stm32 dev board. •Core functionality split up into tasks 
+•Gyro, led, timers, buttons, lcd screen used. •Resource protection via mutex 
+•interrupts and event flags used for inter-task communication 
+• segger used for performance analysis
+
+
+
+code found here <a href="https://github.com/O11WL1D/rtos_final_project?tab=readme-ov-file">here</a> 
+video demo found here <a href="https://www.youtube.com/watch?v=4m_UzZ2M1Ck">here</a> 
+
+    </p>
+</div>
+
+
+
+
+
+
+
+{% assign index = 5 %}
+
+{% include "partials/contentfooter.njk" %}
+
+</div>
+
+
+
+
+
+ 
+ {% assign goption = 2 %}
+
+ {% include "partials/contentscripts.njk" %}
+
+
+ 
+
+
+
+</body>
+</html>

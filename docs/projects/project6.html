@@ -1,0 +1,342 @@
+
+ 
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+
+
+        
+
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+        
+        <style>
+
+body {
+          background-color: rgb(207, 240, 230);
+   
+        }
+
+
+    </style>
+
+<link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
+
+
+</head>
+
+
+
+ 
+  
+
+<body>
+
+
+ 
+
+
+
+
+    <div class="maindiv">
+    
+
+ 
+
+    <div class="headstyle">
+    <h4>
+        welcome to my homepage!
+    </h4>
+</div>
+
+<hr>
+
+
+
+<div class="headstyle">
+
+
+
+
+
+    <header>
+      <div>
+
+
+
+        <a href="../index.html">home |</a>
+        <a href="../projects.html">projects |</a> 
+        <a href="../blog.html">blog |</a> 
+        <a href="../blog.html">resume |</a> 
+    
+
+      </div>
+
+    </header>
+
+
+  </div>
+
+      <div class="spacer">
+
+        </div>
+
+       
+        
+
+<br><br>
+
+
+
+<div class="betterparentboxcenter">
+
+ 
+
+    <div>
+        
+        <img src="../resources/images/wolf.png" class="indicator5"> </img>
+
+      </div>
+
+
+</div>
+
+<div class="betterparentboxcenter">
+    <p class="betterp">
+
+•Implemented on stm32 dev board. •Core functionality split up into tasks 
+•Gyro, led, timers, buttons, lcd screen used. •Resource protection via mutex 
+•interrupts and event flags used for inter-task communication 
+• segger used for performance analysis
+
+
+
+code found here <a href="https://github.com/O11WL1D/rtos_final_project?tab=readme-ov-file">here</a> 
+video demo found here <a href="https://www.youtube.com/watch?v=4m_UzZ2M1Ck">here</a> 
+
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ <div class="parentboxcenter">
+
+    <div class="headystyle">
+    
+  
+      
+
+       <button onclick="gotoprevindex(5)">Prev post</button>
+       <button onclick="gotonextindex(5)">Next post</button>
+
+       <button onclick="randomdream()">random post</button>
+       <button onclick="location.href='../projects.html'">post library</button>
+
+
+   
+   </div>
+   </div>
+   
+
+
+
+<br><br><br><br>
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+
+
+    <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    
+
+</div>
+
+    </footer>
+
+
+
+    
+
+
+    
+
+</div>
+
+
+
+
+
+ 
+ 
+
+ 
+<script>
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        
+        randodreamaudio()
+    
+        
+
+
+
+
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            
+
+            var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        }, 1500); // Delay autoplay
+
+    });
+
+
+
+
+ 
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+
+
+               var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+
+          if(value==1){
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+          }
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
+         
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+
+
+  
+
+
+
+
+
+<script src="../resources/progresources/js/script.js"></script>  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+</body>
+</html>

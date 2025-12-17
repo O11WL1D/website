@@ -6,7 +6,11 @@ let urls = [
   "project3.html",
   "project4.html", 
   "project5.html", 
-  "project6.html"
+  "project6.html",
+  "project7.html",
+  "project8.html", 
+  "project9.html", 
+  "project10.html"
 
 ];
 
