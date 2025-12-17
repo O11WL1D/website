@@ -16,10 +16,6 @@
     <div class="maindiv">
     
 
-    
-
-
-
   {% include "partials/header.njk" %}
        
         
@@ -29,17 +25,53 @@
 
 
 
-<br><br>
-<hr>
+<div>
 
-
-
-
-
-
-
-
+    <h2 class="lefttext">Latest posts:</h2>
 </div>
+
+
+
+  {% assign indi = -1 %}
+  
+
+ 
+
+
+
+
+
+    <ul>
+  
+
+  {% for post in collections.projects %}
+
+  {% assign indi = indi | plus: 1 %}
+
+  
+
+ 
+
+   <li><a href=".{{ post.url }}">{{ post.data.title }}</a></li> <br>
+
+
+   
+
+    
+
+
+ 
+
+
+
+
+
+  {% endfor %}
+
+</ul>
+
+
+
 
 
 
