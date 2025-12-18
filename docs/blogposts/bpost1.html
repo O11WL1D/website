@@ -298,6 +298,141 @@ return
 
 
 
+<br><br>
+<div class="parentboxcenter">
+  <hr>
+<h3> writing support </h3>
+<hr>
+</div>
+
+
+<pre class="textcenter">
+  <code>
+;SENDS RAW TEXT CONFIGURE THIS TO UR NEEDS.
+^F9::
+sleep, 200
+SendRaw, osMutexAcquire(phymutex, 10);
+sleep, 20
+Send {Enter}
+
+return
+  </code>
+</pre>
+
+
+<div class="textcenter">
+  <p class="betterp">
+    This handy little snippet just outputs whatever 
+    text you need at the moment. This is pretty useful 
+    if you are writing a report and need to frequently 
+    re-reference a string of text that you just 
+    dont quite feel like writing over and over again. 
+  </p>
+</div>
+
+
+
+
+
+<br><br>
+<div class="parentboxcenter">
+  <hr>
+<h3> extended windows functionality </h3>
+<hr>
+</div>
+
+
+<pre class="textcenter">
+  <code>
+^!s:: ; Ctrl+Alt+S
+Send {RButton}t
+sleep, 10
+Send, {Down}
+sleep, 10
+Send, {Down}
+sleep, 10
+Send {Enter}
+sleep, 200
+Send {Enter}
+
+	
+return 
+  </code>
+</pre>
+
+
+<div class="textcenter">
+  <p class="betterp">
+      This snippet downloads any image you mouse is 
+      currently hovering over while browsing the web. 
+      Very handy for saving memes that you find 
+      funny online &#58;&#41;
+  </p>
+</div>
+
+
+
+
+<br><br>
+<div class="parentboxcenter">
+  <hr>
+<h3> desktop navigation </h3>
+<hr>
+</div>
+
+
+<pre class="textcenter">
+  <code>
+;NumpadSub::Run C:\Windows\System32\Taskmgr.exe  ; Ctrl + Numpad - opens Task Manager
+;NumpadAdd::Run windowsdefender:                 ; Ctrl + Numpad + opens Windows Security
+
+^!NumpadSub::Run C:\Windows\System32\Taskmgr.exe  ; Ctrl + Numpad - opens Task Manager
+^!NumpadAdd::Run windowsdefender:                 ; Ctrl + Numpad + opens Windows Security
+  </code>
+</pre>
+
+
+<div class="textcenter">
+  <p class="betterp">
+      I make heavy usage of windows desktops in order
+      to keep my workflow organized. I typically have
+      my main task contained in a center desktop, and 
+      have supporting materials contained in the left 
+      and right desktops. Support materials are 
+      often google, reference materials, and more. 
+
+      If the task I am working on gets really complicated, I need
+      two sets of these 3 desktop groups. So, I open up 
+      task manager in the center desktop in group 1, 
+      and snipping tool in group 2. Task manager and snipping tool
+      can only have one instance running at a time. 
+      
+      If you try to open TM when its already running and you
+      you are in a different desktop, windows will simply move 
+      you over to the desktop in which TM is running. Same goes 
+      for snipping tool. 
+
+      By binding numberpad - and NP + to my mouse, I am able 
+      to quickly move to a different desktop group. 
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
