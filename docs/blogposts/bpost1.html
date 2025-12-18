@@ -119,47 +119,39 @@ body {
 </div>
 
 
-
+<br><br>
 
 <div class="parentboxcenter">
   <hr>
-<h3> Code navigation </h3>
+<h3> Frequently used scripts </h3>
 <hr>
 </div>
 
 
-<pre >
+<pre class="textcenter">
   <code>
-; ;FIND SYNTAX uses ctrl and alt. 
+;this sets 11ty to update
+^F8::
+sleep, 200
 
-; ^!p::
-; KeyWait, Control   ; wait until Ctrl is released
-; KeyWait, Alt       ; wait until Alt is released
-; Send  ^f
-; Send  ^a
-; Send {Del}
-; SendRaw physicstaskcb(void *arg)
-; Send {Enter}
-; return 
+Send, npx @11ty/eleventy
+sleep, 20
+Send {Enter}
+
+return
   </code>
 </pre>
 
 
 <div class="textcenter">
   <p class="betterp">
-    When I am working on large projects that
-    start to become very difficult to traverse, 
-    I add a few of these code blocks to my 
-    ahk script which allow my to instantly ctrl+f 
-    search for a given keyword. I usually 
-    add references to functions that I frequently 
-    return to, such as a main loop or a main 
-    state machine. If you notice, there 
-    is a send ^a command in the block. This is 
-    because when ctrl f is pressed, the previous item 
-    searched for will show up. The ^a grabs the text 
-    of the previous item, and is followed with a 
-    delete command to clear the search field. 
+    This command I use quite a bit 
+    during web development, it just 
+    writes out the command for my 
+    templating engine to render 
+    the code I wrote.  I have a 
+    few others for git commits and 
+    other commonly used commands. 
   </p>
 </div>
 
@@ -170,6 +162,93 @@ body {
 
 
 
+
+
+
+
+<br><br>
+<div class="parentboxcenter">
+  <hr>
+<h3> basic debugging </h3>
+<hr>
+</div>
+
+
+<pre class="textcenter">
+  <code>
+;this is a block comment generator for arduino
+^F1::
+sleep, 200
+
+Send, int largedebug=1;
+Send {Enter}
+Send, int subdebug1=1;
+Send {Enter}
+Send, int singlevar=1;
+Send {Enter}
+sleep, 20
+Send {Enter}
+
+return
+  </code>
+</pre>
+
+
+
+<pre class="textcenter">
+  <code>
+    
+;this is a block comment generator for arduino
+^F3::
+sleep, 200
+
+Send, if(largedebug){{}printf("\n---------------------
+-------------------------------text here\n");{}}
+sleep, 20
+Send {Enter}
+
+return
+
+  </code>
+</pre>
+
+
+<div class="textcenter">
+  <p class="betterp">
+    When more advanced debuggers are not available, 
+    I use these ahk based debugging blocks. In each 
+    function I put a debugging block as seen in the 
+    first code snippet, which sets three debug 
+    variables. Afterwards, as seen in the second
+    code snippet, whenever I want to debug something, 
+    I use an ahk debug print statement. If I keep 
+    to using these statements, when I am finished 
+    debugging a function, I just go back to 
+    the debugging block at the start of the function 
+    and set the variable to zero. This disables 
+    print output and concludes debugging for that function. 
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
 <div class="parentboxcenter">
   <hr>
 <h3> Code navigation </h3>
@@ -177,7 +256,7 @@ body {
 </div>
 
 
-<pre >
+<pre class="textcenter">
   <code>
 ; ;FIND SYNTAX uses ctrl and alt. 
 
