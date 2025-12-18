@@ -1450,3 +1450,21 @@ padding-left: 20px;
     max-height: 200px; 
     overflow-y: auto;  
 }
+
+
+           .leftcenter{
+            margin-left:50px;
+}
+
+
+.textcenter{
+  display: flex;
+  text-align: start;
+  
+  
+  justify-content: center;
+  
+  flex-direction: row;
+  
+  
+  }
